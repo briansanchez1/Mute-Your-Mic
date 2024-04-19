@@ -3,8 +3,10 @@ import customtkinter as ctk
 
 
 class App(ctk.CTk):
+    """A class representing the Mute Your Mic graphical application."""
 
     def __init__(self):
+        """Initialize the Microphone Manager application."""
         super().__init__()
 
         #   Window setup
@@ -19,9 +21,8 @@ class App(ctk.CTk):
 
         self.setup_gui()
 
-    # handles setting up the gui
     def setup_gui(self):
-
+        """Set up the GUI elements."""
         # Grid setup
         self.grid_columnconfigure(0, weight=1)
 
@@ -47,8 +48,8 @@ class App(ctk.CTk):
         self.slider.configure(number_of_steps=100)
         self.slider.grid(row=3, padx=20)
 
-    # handles clicking the mute/unmute button
     def button_click(self):
+        """Handle clicking the mute/unmute button."""
         if self.volume_percent == 0:
             return
         self.is_muted = not self.is_muted
@@ -60,8 +61,8 @@ class App(ctk.CTk):
         )
         self.muted_label.configure(text=self.muted_text(), text_color=self.text_color())
 
-    # handles the slider bar moving
     def slider_event(self, value):
+        """Handle the slider bar moving."""
         self.volume_percent = value
         self.microphone_controller.set_volume(self.volume_percent)
         self.volume_percent_label.configure(text=f"{round(self.volume_percent)}%")
@@ -74,16 +75,16 @@ class App(ctk.CTk):
         self.button.configure(text=self.button_text())
         self.muted_label.configure(text=self.muted_text(), text_color=self.text_color())
 
-    # Text that shows up on the mute/unmute text depending on whether the mic is muted or not
     def muted_text(self):
+        """Return text indicating if the microphone is muted."""
         return "You are muted" if self.is_muted else "You are not muted"
 
-    # Color that changes depending on whether the mic is muted or not
     def text_color(self):
+        """Return text color based on microphone mute status."""
         return "red" if self.is_muted else "green"
 
-    # Text that shows up on the mute/unmute button depending on whether the mic is muted or not
     def button_text(self):
+        """Return text for the mute/unmute button based on microphone status."""
         return "Click to mute" if not self.is_muted else "Click to unmute"
 
 
