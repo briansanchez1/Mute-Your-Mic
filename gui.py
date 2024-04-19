@@ -15,7 +15,7 @@ class App(ctk.CTk):
         # Microphone Setup
         self.microphone_controller = MicrophoneController()
         self.is_muted = self.microphone_controller.is_muted()
-        self.volume_percent = self.microphone_controller.get_volume()
+        self.volume_percent = round(self.microphone_controller.get_volume())
 
         self.setup_gui()
 
@@ -54,9 +54,9 @@ class App(ctk.CTk):
         self.is_muted = not self.is_muted
         self.button.configure(text=self.button_text())
         self.microphone_controller.toggle_mic(self.volume_percent)
-        self.slider.set(0.0 if self.is_muted else self.volume_percent)
+        self.slider.set(0 if self.is_muted else self.volume_percent)
         self.volume_percent_label.configure(
-            text=f"{0.0 if self.is_muted else self.volume_percent}%"
+            text=f"{0 if self.is_muted else self.volume_percent}%"
         )
         self.muted_label.configure(text=self.muted_text(), text_color=self.text_color())
 
@@ -64,7 +64,7 @@ class App(ctk.CTk):
     def slider_event(self, value):
         self.volume_percent = value
         self.microphone_controller.set_volume(self.volume_percent)
-        self.volume_percent_label.configure(text=f"{self.volume_percent}%")
+        self.volume_percent_label.configure(text=f"{round(self.volume_percent)}%")
 
         if self.volume_percent == 0:
             self.is_muted = True
