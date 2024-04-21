@@ -6,11 +6,10 @@ This is targeted towards people who have a microphone that lacks physical contro
 
 ## Prerequisites
 
-- **Operating System**: Windows (Tested on Windows 10)
-- **Python 3.7+** 
+- **Operating System**: Windows (Tested on Windows 10 and Windows 11)
+- **Python 3.7+**
 
 ## How to Install and Run
-
 
 1. Clone the repository to your local machine
 
@@ -18,7 +17,7 @@ This is targeted towards people who have a microphone that lacks physical contro
 git clone https://github.com/briansanchez1/Mute-Your-Mic.git
 ```
 
-2. Navigate to project directory
+2. Navigate to repo directory
 
 ```
 cd your-repository
@@ -30,7 +29,13 @@ cd your-repository
 pip install -r requirements.txt
 ```
 
-4. Run program
+4. Navigate to the src directory
+
+```
+cd src
+```
+
+5. Run MicrophoneControllerGui file
 
 ```
 python MicrophoneControllerGui.py
