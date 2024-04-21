@@ -7,16 +7,10 @@ This is targeted towards people who have a microphone that lacks physical contro
 ## Prerequisites
 
 - **Operating System**: Windows (Tested on Windows 10)
-- **Python 3.7+** (if running from source code or want to modify it)
+- **Python 3.7+** 
 
 ## How to Install and Run
 
-### Option 1: Using Executable
-
-1. Download the executable from the releases tab or [click here]()
-2. Run the executable file
-
-### Option 2: Building and Running from Source
 
 1. Clone the repository to your local machine
 
