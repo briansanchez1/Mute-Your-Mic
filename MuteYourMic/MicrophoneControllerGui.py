@@ -21,6 +21,9 @@ class App(ctk.CTk):
 
         self.setup_gui()
 
+        if self.volume_percent == 0:
+            self.button.configure(state="disabled")
+
     def setup_gui(self):
         """Set up the GUI elements."""
         # Grid setup
@@ -57,7 +60,7 @@ class App(ctk.CTk):
         self.microphone_controller.toggle_mic(self.volume_percent)
         self.slider.set(0 if self.is_muted else self.volume_percent)
         self.volume_percent_label.configure(
-            text=f"{0 if self.is_muted else self.volume_percent}%"
+            text=f"{0 if self.is_muted else round(self.volume_percent)}%"
         )
         self.muted_label.configure(text=self.muted_text(), text_color=self.text_color())
 
@@ -69,8 +72,10 @@ class App(ctk.CTk):
 
         if self.volume_percent == 0:
             self.is_muted = True
+            self.button.configure(state="disabled")
         else:
             self.is_muted = False
+            self.button.configure(state="normal")
 
         self.button.configure(text=self.button_text())
         self.muted_label.configure(text=self.muted_text(), text_color=self.text_color())

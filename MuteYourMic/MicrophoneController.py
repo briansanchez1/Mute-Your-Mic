@@ -20,7 +20,7 @@ class MicrophoneController:
         """Checks if the microphone is muted.
 
         Returns:
-            bool: True if the microphone is muted, False otherwise.
+            bool: True if the microphone is muted (volume is 0), False otherwise.
         """
         return self.volume.GetMasterVolumeLevelScalar() == 0.0
 
