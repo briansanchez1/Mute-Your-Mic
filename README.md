@@ -57,7 +57,7 @@ python MicrophoneControllerGui.py
 </p>
 
 <p align="center">
-  Do a combination of the both:
+  Do a combination of both:
 <br/><br/>
   <img src="doc_images/combination.gif" alt="moving-slider-toggle-mute" />
 </p>
@@ -75,4 +75,4 @@ Please follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python code
 
 # License
 
-This project is licensed under the MIT License. Read the [LICENSE](README.md) for more information.
+This project is licensed under the MIT License. Read the [LICENSE](LICENSE) for more information.
