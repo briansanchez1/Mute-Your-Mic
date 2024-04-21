@@ -35,7 +35,12 @@ When you run the program will see the following:
 
 Click the button to toggle mute and unmute:
 
-
+![toggle](https://github.com/briansanchez1/Mute-Your-Mic/assets/115597244/4268fc06-dc25-4f69-9e50-620da271cc11)
 
 Move the slider to adjust the volume:
 
+![slider](https://github.com/briansanchez1/Mute-Your-Mic/assets/115597244/08ad2f05-1fc2-4f83-a2d6-b3e3a908e7a2)
+
+Do a combination of the both:
+
+![combination](https://github.com/briansanchez1/Mute-Your-Mic/assets/115597244/be3455cc-f42d-4242-be8c-5e31027e8014)
