@@ -56,13 +56,13 @@ class App(ctk.CTk):
         if self.volume_percent == 0:
             return
         self.is_muted = not self.is_muted
-        self.button.configure(text=self.button_text())
         self.microphone_controller.toggle_mic(self.volume_percent)
-        self.slider.set(0 if self.is_muted else self.volume_percent)
+        self.button.configure(text=self.button_text())
         self.volume_percent_label.configure(
             text=f"{0 if self.is_muted else round(self.volume_percent)}%"
         )
         self.muted_label.configure(text=self.muted_text(), text_color=self.text_color())
+        self.slider.set(0 if self.is_muted else self.volume_percent)
 
     def slider_event(self, value):
         """Handle the slider bar moving."""
