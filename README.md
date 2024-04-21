@@ -4,6 +4,8 @@ This program simplifies muting/unmuting and adjusting the volume of your microph
 
 This is targeted towards people who have a microphone that lacks physical controls, reducing the need for navigating through Windows settings for these basic tasks.
 
+While intuitively, setting your microphone volume to 0 means muting it, you can still hear audio, albeit extremely faintly. I used the term "Mute" because it is *almost* the same thing realistically.
+
 ## Prerequisites
 
 - **Operating System**: Windows (Tested on Windows 10 and Windows 11)
@@ -76,7 +78,7 @@ Any contributions are welcome! Feel free to modify the code to fit your needs:
 
 #### Code Style and Standards
 
-Please follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python code style
+Please follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python coding style
 
 # License
 
