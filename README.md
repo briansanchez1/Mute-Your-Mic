@@ -1,13 +1,13 @@
 # Mute Your Microphone (Windows)
 
-This program simplifies muting/unmuting and adjusting the volume of your microphone on **Windows**.
+This program simplifies muting/unmuting and adjusting the volume of your microphone on **Windows**. It only targets the default microphone right now.
 
-It's especially useful if your microphone lacks physical controls, reducing the need for navigating through Windows settings for these basic tasks.
+This is targeted towards people who have a microphone that lacks physical controls, reducing the need for navigating through Windows settings for these basic tasks.
 
 ## Prerequisites
 
-- Operating System: Windows (Tested on Windows 10)
-- Python 3.7+ (if running from source code or want to modify it)
+- **Operating System**: Windows (Tested on Windows 10)
+- **Python 3.7+** (if running from source code or want to modify it)
 
 ## How to Install and Run
 
@@ -68,7 +68,7 @@ python MicrophoneControllerGui.py
   <img src="doc_images/combination.gif" alt="moving-slider-toggle-mute" />
 </p>
 
-### Contributing
+# Contributing
 
 Any contributions are welcome! Feel free to modify the code to fit your needs:
 
@@ -79,6 +79,6 @@ Any contributions are welcome! Feel free to modify the code to fit your needs:
 
 Please follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python code style
 
-### License
+# License
 
 This project is licensed under the MIT License. Read the [LICENSE](README.md) for more information.
